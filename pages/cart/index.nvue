@@ -1,0 +1,35 @@
+<template>
+	<view class="u-page">
+		
+		<u-empty
+			:mode="mode"
+			:icon="emptyImg"
+		>
+			<view style="margin-top: 15px;">
+				<u-button
+					size="small"
+					type="primary"
+					text="查看更多商品"
+				>
+				</u-button>
+			</view>
+			
+		</u-empty>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			const baseUrl = 'http://cdn.uviewui.com/uview/empty/'
+			return {
+				mode: 'car',
+				emptyImg: baseUrl + "car.png"
+			}
+		}
+	}
+</script>
+
+<style>
+
+</style>

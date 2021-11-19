@@ -1,0 +1,110 @@
+<template>
+	<view class="warp">
+		<view class="userInfo" :style="{backgroundImage:`url(${bgImg})`}">
+			<view class="userAvatar">
+				<open-data type="userAvatarUrl"></open-data>
+			</view>
+			<view class="nickName">
+				<open-data type="userNickName"></open-data>
+			</view>
+			<view class="finance">
+				<u-row>
+					<u-col span="4">
+						<view class="finance-item">
+							<Text >0 元</text>
+							<Text class="finance-item-sub">账户余额</text>
+						</view>
+					</u-col>
+					<u-col span="4">
+						<view class="finance-item">
+							<Text>0 元</text>
+							<Text class="finance-item-sub">账户余额</text>
+						</view>
+					</u-col>
+					<u-col span="4">
+						<view class="finance-item">
+							<Text>0 元</text>
+							<Text class="finance-item-sub">账户余额</text>
+						</view>
+					</u-col>
+				</u-row>
+			</view>
+		</view>
+		<view class="cell-group">
+			<u-cell-group>
+				<u-cell title="订单" isLink url="/pages/order/index">
+					<u-icon slot="icon" size="32" name="order"></u-icon>
+				</u-cell>
+				<u-cell title="优惠券">
+					<u-icon slot="icon" size="32" name="coupon"></u-icon>
+				</u-cell>
+			</u-cell-group>
+		</view>
+	</view>
+</template>
+
+<script>
+	import bgImg from "../../static/banner.jpg"
+	export default {
+		data() {
+			return {
+				bgImg: bgImg,
+				src: "/static/avatar1.jpeg"
+			}
+		},
+	}
+</script>
+
+<style lang="scss">
+	.warp {
+		.userInfo {
+			height: 180px;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+
+			.userAvatar {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+
+			.nickName {
+				margin-top: 5px;
+				color: $u-content-color;
+				font-size: 14px;
+			}
+
+			.finance {
+				position: absolute;
+				left: 10%;
+				width: 80%;
+				height: 80px;
+				bottom: -55px;
+				background: #fff;
+				border-radius: 8px;
+				box-shadow:0 0 2px 1px rgba(0,0,0,0.03);
+
+				&-item {
+					height: 80px;
+					justify-content: center;
+					align-items: center;
+					
+					&-sub {
+						margin-top: 5px;
+						font-size: 14px;
+						color: $u-tips-color;
+					}
+				}
+			}
+		}
+		
+		.cell-group {
+			background: #fff;
+			margin-top: 80px;
+		}
+	}
+</style>

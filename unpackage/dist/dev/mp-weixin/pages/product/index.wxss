@@ -1,0 +1,159 @@
+
+view,
+label,
+swiper-item,
+scroll-view {
+  display:flex;
+  flex-direction:column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
+}
+view,
+image,
+input,
+scroll-view,
+swiper,
+swiper-item,
+text,
+textarea,
+video {
+  position: relative;
+  border: 0px solid #000000;
+  box-sizing: border-box;
+}
+swiper-item {
+  position: absolute;
+}
+button {
+  margin: 0;
+}
+
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+page, .container {
+  height: 100%;
+}
+/* 容器 */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.container > view {
+  width: 100%;
+}
+.container .scroll-panel {
+  flex-grow: 1;
+  height: 0;
+  overflow: hidden;
+}
+.container .bottom-panel {
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.list-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  font-size: 28rpx;
+}
+.list-box .left {
+  width: 200rpx;
+  background-color: #f6f6f6;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+.list-box .left .item {
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  color: #333;
+  padding-left: 20rpx;
+  position: relative;
+}
+.list-box .left .item:not(:first-child) {
+  margin-top: 1px;
+}
+.list-box .left .item:not(:first-child)::after {
+  content: '';
+  display: block;
+  height: 0;
+  border-top: #d6d6d6 solid 1px;
+  width: 620rpx;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+  /* 1px像素 */
+}
+.list-box .left .item.active {
+  color: #007AFF;
+  background-color: #fff;
+}
+.list-box .left .fill-last {
+  height: 0;
+  width: 100%;
+  background: none;
+}
+.list-box .main {
+  background-color: #fff;
+  padding-left: 20rpx;
+  width: 0;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.list-box .main .title {
+  line-height: 64rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #666;
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 19;
+}
+.list-box .main .item {
+  padding-bottom: 10rpx;
+  border-bottom: #eee solid 1px;
+}
+.list-box .main .goods {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 10rpx;
+}
+.list-box .main .goods > image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 16rpx;
+  margin-left: 2px;
+}
+.list-box .main .goods .describe {
+  font-size: 24rpx;
+  color: #999;
+}
+.list-box .main .goods .money {
+  font-size: 24rpx;
+  color: #efba21;
+}
+

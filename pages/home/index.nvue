@@ -1,0 +1,95 @@
+<template>
+	<view class="wrap">
+		<view class="u-demo-block">
+			<u-swiper
+				:list="banners"
+				previousMargin="30"
+				nextMargin="30"
+				circular
+				:autoplay="false"
+				radius="5"
+			></u-swiper>
+		</view>
+		<view class="u-block">
+			<view class="select-shop">
+				<text>距离您最近的门店: </text>
+				<text class="shop-name">猎人培训基地 (距离 32m)</text>
+			</view>
+
+		</view>
+		<view class="u-block cards">
+			<u-row gutter="15">
+				<u-col span="6">
+					<view class="card">
+						立即下单
+					</view>
+				</u-col>
+				<u-col span="6">
+					<view class="card" style="height: 70px;margin-bottom: 10px;">充值</view>
+					<view class="card" style="height: 70px;">优惠</view>
+				</u-col>
+			</u-row>
+		</view>
+		
+		<view class="u-block"><view class="coupon">优惠券</view></view>
+		 
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				banners: [
+					'/static/banner.jpg',
+					'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+					'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+				],
+			}
+		}
+	}
+</script>
+
+<style lang="scss">
+	.wrap {
+		.section-box {
+			padding: 10px 15px;
+		}
+		.select-shop {
+			background-color: #fff;
+			justify-content: center;
+			padding: 15px;
+			font-size: 15px;
+			color: $u-tips-color;
+			border-radius: 5px;
+			
+			.shop-name {
+				margin-top: 5px;
+				color: $u-main-color;
+			}
+		}
+		
+		.cards {
+			
+			.card {
+				background: #fff;
+				height: 150px;
+				border-radius: 15px;
+				border: 1px solid #eee;
+				justify-content: center;
+				align-items: center;
+				box-shadow:5px 5px 2px rgba(0,0,0,0.03)
+			}
+		}
+		
+		.coupon {
+			padding: 10px 15px;
+			height: 50px;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #eee;
+			border-radius: 15px;
+			background: #fff;
+		}
+	}
+</style>

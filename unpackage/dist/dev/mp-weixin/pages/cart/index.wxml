@@ -1,0 +1,1 @@
+<view class="u-page"><u-empty vue-id="6a21c8ac-1" mode="{{mode}}" icon="{{emptyImg}}" bind:__l="__l" vue-slots="{{['default']}}"><view style="margin-top:15px;"><u-button vue-id="{{('6a21c8ac-2')+','+('6a21c8ac-1')}}" size="small" type="primary" text="查看更多商品" bind:__l="__l"></u-button></view></u-empty></view>
